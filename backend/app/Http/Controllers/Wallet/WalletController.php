@@ -21,12 +21,12 @@ class WalletController extends Controller
         if($send_money) {
             return response()->json([
                 'status'  => 'success',
-                'message' => 'Money sent successfully.',
+                'message' => 'Transaction successfully completed.',
             ]);
         }
         return response()->json([
             'status'  => 'error',
-            'message' => 'Something went wrong. Please try again',
+            'message' => 'Something went wrong. Please try again.',
         ]);
     }
 }

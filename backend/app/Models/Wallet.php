@@ -9,5 +9,5 @@ class Wallet extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['amount', 'receiver_id', 'sender_id', 'currency'];
+    protected $fillable = ['sender_amount', 'receiver_amount', 'receiver_id', 'sender_id', 'sender_currency', 'receiver_currency'];
 }

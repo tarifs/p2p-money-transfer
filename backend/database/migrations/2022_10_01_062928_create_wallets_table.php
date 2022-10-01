@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('wallets', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('amount');
+            $table->decimal('sender_amount');
+            $table->decimal('receiver_amount');
             $table->integer('receiver_id');
             $table->integer('sender_id');
-            $table->string('currency', 30);
+            $table->string('sender_currency', 50);
+            $table->string('receiver_currency', 50);
             $table->timestamps();
         });
     }

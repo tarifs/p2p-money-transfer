@@ -14,7 +14,8 @@ const SentMoney = () => {
   const [errors, setErrors] = useState("");
   const [processing, setProcessing] = useState(false);
   const initialState = {
-    amount: "",
+    sender_amount: "",
+    sender_currency: "",
     receiver_id: "",
     sender_id: "",
   };
@@ -27,7 +28,11 @@ const SentMoney = () => {
     if (getUser) {
       setLoading(false);
       setUser(getUser);
-      setData({ ...data, sender_id: getUser.id });
+      setData({
+        ...data,
+        sender_id: getUser.id,
+        sender_currency: getUser.currency,
+      });
     }
   }, []);
 
@@ -91,7 +96,7 @@ const SentMoney = () => {
         <div className="form-submit">
           <div className="d-flex justify-content-between align-items-baseline">
             <h4 className="section-title">
-              My Currency {user && user.currency}
+              My Currency [{user?.currency?.toUpperCase()}]
             </h4>
           </div>
           <hr />
@@ -102,8 +107,8 @@ const SentMoney = () => {
                   <label>Amount</label>
                   <input
                     type="number"
-                    id="amount"
-                    name="amount"
+                    id="sender_amount"
+                    name="sender_amount"
                     className="form-control"
                     placeholder="Enter amount"
                     onChange={changeHandler}
@@ -112,8 +117,8 @@ const SentMoney = () => {
                     min="1"
                     required
                   />
-                  {errors && errors.amount ? (
-                    <h5 className="text-danger mt-2">{errors.amount[0]}</h5>
+                  {errors && errors.sender_amount ? (
+                    <h5 className="text-danger mt-2">{errors.sender_amount[0]}</h5>
                   ) : (
                     ""
                   )}

@@ -40,7 +40,7 @@ function SignInModal(props) {
           setErrors("");
           props.onHide();
           props.afterSignIn(res.data.user);
-          router.push("/user/dashboard);
+          router.push("/user/dashboard");
         }
       })
       .catch((error) => {

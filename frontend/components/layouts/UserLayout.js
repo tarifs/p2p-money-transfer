@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { Accordion } from "react-bootstrap";
 import UserLayoutLinks from "./UserLayoutLinks";
 

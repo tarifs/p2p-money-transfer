@@ -24,7 +24,8 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'amount' => ['required', 'integer'],
+            'sender_amount' => ['required', 'min:1'],
+            'sender_currency' => ['required'],
             'sender_id' => ['required'],
             'receiver_id' => ['required'],
         ];

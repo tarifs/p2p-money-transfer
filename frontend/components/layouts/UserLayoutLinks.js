@@ -13,6 +13,14 @@ const UserLayoutLinks = () => {
   return (
     <div className="d-navigation">
       <ul>
+        <li className={router.asPath === `/user/dashboard` && `active`}>
+          <Link href={`/user/dashboard`}>
+            <a>
+              <i className="fas fa-home" />
+              Dashboard
+            </a>
+          </Link>
+        </li>
         <li className={router.asPath === `/user/send-money` && `active`}>
           <Link href={`/user/send-money`}>
             <a>
