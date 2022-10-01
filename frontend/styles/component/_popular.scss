@@ -1,0 +1,46 @@
+.osahan-home-page {
+
+}
+
+.osahan-home-trending {
+  background-color: whitesmoke;
+  height: auto;
+  padding: 0 0 7rem 0;
+}
+
+.list-card {
+  background-color: $color-white
+}
+
+.osahan-para-kitchen {
+  color: rgb(0 0 0 / 37%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 7rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.osahan-para-kitchen:after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 5px;
+  background: rgba(95,64,64,.639);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.section-title-popular {
+  font-family: Montserrat, sans-serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 3.2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -1vw;
+  margin-top: 3vw;
+  color: rgba(0, 0, 0, .761);
+}

@@ -1,0 +1,132 @@
+.registration-modal {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    &--left{
+        padding-left: 3rem;
+        @include respond(tab-port){
+            text-align: center;
+        }
+    }
+    &--right{
+        padding-inline: 8% !important;
+        @include respond(tab-land){
+            padding-inline: 4% !important;
+        }
+        @include respond(phone){
+            padding-inline: 0 !important;
+        }
+        .PhoneInputCountry{
+            padding: .7rem;
+        }
+    }
+    .row{
+        margin: 0;
+    }
+    .modal-body{
+        display: flex;
+        align-items: center;
+    }
+    .modal-backdrop{
+        background: red;
+        .show{
+            opacity: 1 !important;
+        }
+    }
+    .modal-backdrop.show{
+        opacity: 1 !important;
+    }
+    .modal-backdrop {
+        opacity: 1;
+    }
+    .highlight-text{
+        font-weight: bold;
+        font-size: 5rem;
+    }
+    .modal-dialog{
+        max-width: 70vw !important;
+        margin: 23vh auto;
+    }
+    .modal-content {
+        background-image: url('../../../public/assets/img/pattern.png');
+        background-size: cover;
+        // height: 50vh;
+        .phone {
+            background-color: $color-gray-1;
+        }
+    }
+
+    &-header{
+        margin: 13%;
+        border: 1px solid $color-primary;
+        border-radius: 5rem;
+        @include flexCenter;
+    }
+    .custom-input {
+        display: flex;
+        border: 2px solid $color-primary;
+        border-radius: 5rem;
+        flex-grow: 1;
+        align-items: center;
+        input{
+            border: none;
+            &:focus{
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    .icons-collection{
+        @include flexCenter;
+        margin: 1rem 0rem;
+        button{
+            width: auto;
+            background: transparent;
+        }
+    }
+    .custom-input span, .icons-collection span {
+        margin-inline: 1rem;
+        background-color: $color-primary;
+        display: block;
+        width: 2.5rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin-left: 0.5rem;
+        i{
+            color: $color-white;
+            display: block;
+            font-size: 1rem;
+            margin-top: .5rem;
+        }
+    }
+    .icons-collection span{
+        width: 5rem;
+        height: 5rem;
+        @include flexCenter;
+        i{
+            color: $color-white;
+            display: block;
+            font-size: 2.5rem;
+            @include flexCenter;
+        }
+    }
+    button {
+        @include roundedPrimaryBtn;
+        padding: .5rem;
+        width: 40%;
+        @include respond(phone){
+            width: 60%;
+        }
+    }
+    .close{
+        position: absolute;
+        text-align: right;
+        font-size: 3rem;
+        width: auto;
+        z-index: 1;
+        right: 0;
+        top: 0;
+    }
+}

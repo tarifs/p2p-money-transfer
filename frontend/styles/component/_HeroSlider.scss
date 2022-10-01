@@ -1,0 +1,42 @@
+.homepage-banner {
+  background: white;
+  border-radius: 5px;
+  height: auto;
+  @include respond(phone) {
+    width: auto;
+    height: auto;
+    p {
+      font-size: 8px;
+    }
+  }
+}
+
+.banner-card {
+  a{
+    color: $color-primary;
+    overflow: hidden;
+    font-size: 8px;
+    @include respond(phone) {
+      font-size: 5px;
+    }
+    @include respond(tab-port) {
+      font-size: 5px;
+    }
+    @include respond(tab-land) {
+      font-size: 5px;
+    }
+  }
+  h6{
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+// This is from HeroSlider.js file. As there is no new scss file
+.osahan-banner-slider {
+  h6{
+    color: #f8f8ffd6;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}

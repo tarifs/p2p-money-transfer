@@ -1,0 +1,86 @@
+.footer-text {
+  color: rgba(0, 0, 0, .761);
+  font-size: 20px;
+}
+
+.footer-subscribe {
+  padding: 0 0 0 0;
+  @include respond(phone) {
+    padding: 0 0 0 1rem;
+  }
+  @include respond(tab-port) {
+    padding: 0 0 0 1rem;
+  }
+}
+
+.footer-link {
+  display: inline-flex;
+  @include respond(phone) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0 2rem 0;
+  }
+  @include respond(tab-port) {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0 2rem 0;
+  }
+}
+
+.section-footer-new {
+  background-color: whitesmoke;
+}
+
+.newsletter-section {
+  display: inline-flex;
+  margin: 2rem 0rem 1rem 0;
+  ::placeholder {
+    color: #495057;
+    font-size: 12px !important;
+    opacity: 1;
+  }
+  :focus {
+    color: $color-secondary;
+  }
+  @include respond(phone) {
+    display: grid;
+  }
+  @include respond(tab-port) {
+    display: inherit;
+  }
+  input {
+    display: block;
+    height: calc(3.65rem + 12px);
+    padding: 0 0 0.4rem 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0f455221;
+    background-color: $color-white;
+    background-clip: padding-box;
+    border: 1px solid #d0d8e0;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow: rgb(0 0 0 / 0%) 0px 10px 10px, rgb(0 0 0 / 10%) 0px 6px 6px;
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
+  }
+  input:hover {
+    border: gainsboro;
+  }
+  button {
+    padding: 0 2rem 0 2rem !important;
+    box-shadow: rgb(0 0 0 / 0%) 0px 10px 10px, rgb(0 0 0 / 10%) 0px 6px 6px;
+  }
+
+}
+
+

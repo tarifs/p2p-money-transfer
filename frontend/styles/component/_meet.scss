@@ -1,0 +1,155 @@
+.meet-slider {
+  .slider {
+    &-control-icon {
+      font-size: 5rem;
+      font-weight: 700;
+      color: rgba($color-primary, .7);
+      position: absolute;
+    }
+
+    .bi-arrow-right-short {
+      right: -5rem;
+      top: 50%;
+    }
+
+    .bi-arrow-left-short {
+      z-index: 1000;
+      left: -5rem;
+      @include respond(912px) {
+        left: -1rem !important;
+      }
+      @include respond(tab-port) {
+        left: -1rem;
+      }
+      top: 50%;
+    }
+  }
+}
+
+.shadow {
+  border-radius: 1rem !important;
+}
+
+.meet-card-content {
+  border-radius: 1rem !important;
+  a {
+    color: $color-primary;
+    h3 {
+      font-weight: bold;
+      color: rgb(0 0 0 / 81%) !important;
+    }
+  }
+
+  a:hover {
+    color: #d70f64;
+  }
+}
+
+.meet {
+  &-card {
+    margin: 2rem;
+    background: #fff;
+    width: 33vw;
+    @include respond(big-desktop) {
+      width: 23vw;
+      height: 20rem;
+      padding: 0 1rem;
+    }
+    @include respond(tab-land) {
+      width: 33vw;
+    }
+    @include respond(tab-port) {
+      width: 45vw;
+    }
+    @include respond(phone) {
+      width: 80vw;
+    }
+    @media screen and (max-width: 1400px) and (min-width: 1200px) {
+      width: 39vw;
+    }
+    @media screen and (max-width: 1800px) and (min-width: 1700px) {
+      width: 29vw;
+    }
+
+    &-left {
+      margin-right: -7rem;
+      overflow: hidden;
+      width: 30rem;
+      @include respond(912px) {
+        width: 45rem;
+      }
+      @include respond(tab-port) {
+        width: 42rem;
+      }
+      @include respond(phone) {
+        width: 36rem;
+      }
+      border-radius: 50%;
+      z-index: 5;
+      padding: 15px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .profile {
+        padding: 13px;
+      }
+    }
+
+    &-right {
+      padding-left: 8rem !important;
+      background: white;
+      text-align: right;
+      width: 30vw;
+      height: 19.6rem;
+
+      a {
+        color: #0b0b0b;
+        font-weight: 500;
+      }
+
+      a:hover {
+        color: #0a58ca;
+      }
+
+      @include respond(phone) {
+        width: 40vw;
+        height: 33rem !important;
+      }
+      @include respond(tab-port) {
+        width: 40vw;
+        height: 22rem;
+      }
+      @include respond(tab-land) {
+        width: 40vw;
+        height: 22rem;
+      }
+
+      &--ratings {
+        i {
+          color: $color-primary;
+          font-size: 1.4rem;
+          @include respond(tab-port) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      h1 {
+        color: $color-primary;
+        font-style: italic;
+      }
+
+      button {
+        background-color: $color-primary;
+        font-size: 2rem;
+        border: none;
+        width: 10rem;
+      }
+    }
+  }
+}

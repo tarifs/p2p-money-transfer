@@ -1,0 +1,78 @@
+@import '../../base/mixin';
+.kitchen-banner{
+  //background: url('../../../public/assets/img/kitchen-banner-img3.png');
+  height: 75vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: round;
+
+  @include respond(big-desktop){
+    height: 60vh;
+  }
+  @include respond(tab-land)
+  {
+    height: 40vh;
+  }
+  @include respond(tab-port){
+    height: 40vh;
+  }
+  @include respond(phone){
+    height: 35vh;
+  }
+
+  &-text{
+    background: rgba(13, 13, 13, 0.8);
+    color: #fcf8f7;
+    padding: 2rem 5rem;
+    z-index: 2;
+    width: 50vw;
+    font-size: 7rem;
+    text-align: left;
+    top: 20rem;
+    @include respond(1280px){
+      font-size: 5.2rem;
+    }
+    @include respond(tab-land)
+    {
+      width: 70vw;
+    }
+    @include respond(phone){
+      padding: 0 !important;
+      left:0;
+      width: 80vw;
+      font-size: 5.2rem;
+      top: 15rem;
+    }
+  }
+  &-title{
+    font-size: 50px;
+    font-weight: bold;
+    @include respond(big-desktop){
+      font-size: 30px;
+    }
+    @include respond(tab-land)
+    {
+      font-size: 30px;
+    }
+    @include respond(tab-port){
+      font-size: 30px;
+    }
+    @include respond(phone){
+      font-size: 30px;
+    }
+  }
+  &-subtitle{
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    @include respond(big-desktop){
+      font-size: 15px;
+    }
+    @include respond(tab-land)
+    {
+      font-size: 15px;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+  }
+}

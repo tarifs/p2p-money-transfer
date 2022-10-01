@@ -1,0 +1,74 @@
+.profile{
+  &-card {
+    border-radius: 5px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0px 0px 5px 2px #e8e8e8;
+    @include respond(phone){
+      border-radius: 5px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0px 0px 5px 2px #e8e8e8;
+      max-width: 96%;
+      margin: 10px !important;
+    }
+  
+    .h1,
+    h1 {
+      font-size: 3rem;
+      color: #5a5a5a;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  
+    p {
+      color: #bcbcbc;
+      font-size: 16px;
+    }
+  
+    .add-profile-photo {
+      position: relative;
+      width: 115px;
+      height: 115px;
+      border: 1px dashed #ced4da;
+      background: rgba(250, 250, 250, 0.5803921569);
+      border-radius: 50%;
+      transition: 0.2s;
+      text-align: center;
+      padding: 25px 10px;
+  
+      span {
+        font-size: 14px;
+        color: #bcbcbc;
+      }
+  
+      .file-input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        opacity: 0;
+      }
+    }
+  
+    .social-link {
+      label {
+        background: whitesmoke;
+        padding: 8px;
+        border-radius: 5px;
+        width: 110px;
+      }
+    }
+  }
+}
+
+@import 'form';
+
+@media screen and (width: 768px) {
+  .profile-card {
+    border-radius: 5px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0px 0px 5px 2px #e8e8e8;
+    max-width: 46%;
+  }
+}

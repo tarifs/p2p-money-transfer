@@ -1,0 +1,72 @@
+.osahan-home-trending-cook {
+  background-color: white;
+  height: auto;
+  padding: 0 0 7rem 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.osahan-para-cook {
+  color: rgb(0 0 0 / 37%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 6rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.osahan-para-cook:after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 5px;
+  background: rgba(95,64,64,.639);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.section-title-new-kitchen {
+  font-family: Montserrat, sans-serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 3.2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -1vw;
+  margin-top: 3vw;
+  color: rgba(0, 0, 0, .761);
+}
+
+.cook-btn {
+  font-size: 16px;
+  padding: 2rem 5rem 2rem 5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 1.3rem;
+  //background: linear-gradient(45deg, #11ee9a, #0af39e);
+  background: linear-gradient(45deg, $color-primary, $color-primary);
+  margin-left: auto;
+  margin-right: auto;
+  display: inherit;
+}
+
+.cook-btn:hover {
+  border: white;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary 100%);
+}
+
+.cook-link {
+  color: white;
+}
+
+.cook-link:hover {
+  color: white;
+}
+
+.feather-cook {
+  font-weight: 600;
+  color: white;
+}

@@ -1,0 +1,25 @@
+.auth {
+  &-wrapper {
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgb(51 65 80 / 6%), 0 5px 15px rgb(51 65 80 / 11%);
+  -webkit-box-shadow: 0 1px 3px rgb(51 65 80 / 6%), 0 5px 15px rgb(51 65 80 / 11%);
+  margin-top: 100px;
+  color: #838f9c;
+
+    input{
+      border-color: #2c9bfc
+    }
+  }
+}
+
+.forgot-icon{
+  font-size: 45px;
+  margin-bottom: 0.5rem;
+}
+
+.expire-icon{
+  font-size: 45px;
+  color: red;
+}
+

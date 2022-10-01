@@ -1,0 +1,75 @@
+.card-img {
+    position: relative;
+    width: auto;
+    height: auto;
+    border-radius: 11px;
+}
+
+.feature-card-title {
+    position: absolute;
+    color: white;
+    text-align: start;
+    font-weight: bold;
+    display: table-cell;
+    justify-content: center;
+    bottom: 0;
+    text-shadow: 0px 0px whitesmoke;
+    @include respond(phone) {
+        font-size: 1.2vw;
+    }
+    @include respond(tab-port) {
+        font-size: 1.2vw;
+    }
+    @include respond(tab-land) {
+        font-size: 1.2vw;
+    }
+}
+
+.features{
+    .card{
+        width: auto;
+        height: auto;
+        border-radius: 1.25rem ;
+        padding-left: 0;
+        padding-right: 0;
+        @include respond(phone){
+            width:auto;
+        }
+        box-shadow: -1px 3px 13px -5px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -1px 3px 13px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 3px 13px -5px rgba(0,0,0,0.75);
+        .feature-work-img{
+            margin: 20% 0;
+            width: 40%;
+            height: auto;
+        }
+    }
+    &-work{
+        &-heading{
+            color: $color-primary;
+            font-weight: bold;
+        }
+        &-body{
+            min-width: 20rem;
+        }
+    }
+    &-title{
+        color: black;
+        font-weight: 700;
+        font-size: 2.2rem;
+    }
+    &-title:hover{
+        color: #0a58ca;
+    }
+    &-body{
+        padding: 2rem;
+        margin-top: 2rem;
+        justify-content: center;
+        @include respond(phone){
+            padding: 0;
+        }
+    }
+    &-description{
+        font-weight: 700;
+    }
+}

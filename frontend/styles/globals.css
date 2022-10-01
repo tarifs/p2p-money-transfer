@@ -1,0 +1,37 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.map-modal > form {
+  width: 100%;
+}
+
+.ck-editor__top {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .ant-table-content {
+    overflow-x: scroll;
+  }
+}
+.ant-table-content {
+  box-shadow: 0px 0px 5px 1px #e8e8e8;
+}

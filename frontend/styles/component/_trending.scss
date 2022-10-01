@@ -1,0 +1,60 @@
+.osahan-home-page {
+  .view-all {
+    color: $color-primary;
+  }
+
+  .view-all:hover {
+    color: #0056b3;
+  }
+}
+
+.osahan-home-trending {
+  background-color: whitesmoke;
+  height: auto;
+  padding: 0 0 7rem 0;
+}
+
+.list-card {
+  background-color: $color-white;
+}
+
+.osahan-para {
+  color: rgb(0 0 0 / 37%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 6rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.osahan-para:after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 5px;
+  background: rgba(95,64,64,.639);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.list-card-body {
+  p {
+    color: #000000b8;
+  }
+}
+
+.section-title-new-kitchen {
+  font-family: Montserrat, sans-serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 3.2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -1vw;
+  margin-top: 3vw;
+  color: rgba(0, 0, 0, .761);
+}
+

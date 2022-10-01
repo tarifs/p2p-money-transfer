@@ -1,0 +1,83 @@
+.seller{
+    //text-transform: uppercase;
+    background: whitesmoke;
+    &_left{
+        display: inline-flex;
+        img{
+            width: 40rem;
+            height: 40rem;
+        }
+    }
+    &_right{
+        justify-content: left;
+        h1{
+            font-family: 'Josefin-new', sans-serif;
+            color:#181616;
+            font-size: 5.4rem;
+            padding: 0 0 4rem 0;
+            span{
+                font-size:5rem;
+            }
+        }
+        h3{
+            font-family: 'Josefin-new', sans-serif;
+            color: #181616;
+            font-weight: bold;
+        }
+        p{
+            color: rgba(0,0,0,.471);
+        }
+        &_btn{
+            button{
+                background-color: #bd6373;
+                border: none;
+                height: 3rem;
+                border-radius: 3rem;
+            }
+            button:hover {
+                background-color: $color-secondary;
+                border: none;
+            }
+        }
+    }
+    &_promote{
+        button{
+            background-color: $color-primary;
+            border: none;
+            height: 3rem;
+            border-radius: 3px;
+            @include respond(phone) {
+                margin-bottom: 3rem;
+            }
+            @include respond(tab-port) {
+                margin-bottom: 3rem;
+            }
+        }
+        button:hover {
+            background-color: $color-secondary;
+            border: none;
+        }
+        a{
+            color: #000000;
+            font-size: 1.2rem;
+            padding: 0 35px 0 25px;
+            font-weight: 400;
+        }
+    }
+}
+
+.image-left {
+    margin-left: -1rem;
+    @include respond(phone) {
+        margin-bottom: 4rem;
+    }
+}
+
+.image-right {
+
+}
+
+.feather-cook-seller {
+    font-weight: 600;
+    color: $color-white;
+}

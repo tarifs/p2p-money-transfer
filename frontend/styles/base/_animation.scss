@@ -1,0 +1,11 @@
+@keyframes loco {
+    0%   {width: 0vw;}
+    25%  {width: 30vw;}
+    50%  {width: 60vw;}
+    100% {width: 40vw;}
+  }
+@keyframes bounce {
+  0% { right: 6rem;}
+  50% {right: 1rem;}
+  100% {right: 3rem;}
+}

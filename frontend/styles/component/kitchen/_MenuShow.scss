@@ -1,0 +1,46 @@
+.menu-show{
+    .modal-xl {max-width: 60% !important;}
+    .modal-lg {
+        max-width: 60%;
+        @include respond(phone){
+            max-width: 80% !important;
+            margin-inline: auto;
+        }
+    }
+    &-body{
+        background: rgb(104, 103, 103);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    &-card{
+        background: rgb(104, 103, 103);
+        border: none;
+        color: $color-white;
+        font-family: inherit;
+        position: relative;
+        .card-body{
+            @include respond(big-desktop){
+                padding-right: 15rem !important;
+            }
+        }
+        .close{
+            position: absolute;
+            z-index: 100;
+            right: 1rem;
+            top:0;
+        }
+        h1{
+            font-size: 3.5rem;
+        }
+        &-text{
+            font-size: 1.2rem;
+            color: $color-white;
+        }
+        &-icons{
+        }
+        &-icon{
+            width: 4rem;
+            border: none;
+            @include flexCenter;
+        }
+    }
+}

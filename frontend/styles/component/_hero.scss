@@ -1,0 +1,299 @@
+.hero{
+    //background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../public/assets/img/slider-img-3.png");
+    //background-position: center;
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    .search-container{
+        margin: -7rem 0 0 96px;
+        padding: 0 0 60px 0;
+        position: absolute;
+        @include respond(phone){
+            margin: 10px 0 0 10px !important;
+            padding: 0 0 20px 0;
+            justify-content: center;
+            position: unset;
+            padding-bottom: 5rem !important;
+        }
+        @include respond(tab-port){
+            margin: -8rem 0 0 72px;
+        }
+        @include respond(tab-land){
+            margin: -5rem 0 0 85px;
+        }
+    }
+
+    .d-flex {
+        align-items: center !important;
+    }
+
+    .search-input{
+        border:none;
+        border-radius: 1.9rem;
+        height: 3.5rem;
+        background: rgba($color-primary,.2);
+        color:$color-primary;
+        font-size: $default-font;
+        padding: 0 1rem;
+        z-index: 1;
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            color:$color-primary;
+            font-style: italic;
+        }
+    }
+    .zip-btn{
+        border-radius: 1.9rem;
+        margin-left: -2rem;
+        background-color: $color-primary;
+        font-size: $default-font;
+        height: 3.5rem;
+        width: 21rem;
+        font-style: italic;
+    }
+
+    .homepage-menu {
+        padding: 12rem 0 0 0;
+        h1{
+            font-size: 5.5rem;
+            text-align: center;
+        }
+        h3{
+            color: #ffffff61;
+            font-size: 2rem;
+            padding: 0 0 0 3.5rem;
+        }
+    }
+
+    .btn-lg {
+        font-size: 1.5rem;
+        padding: 10.5px 24px;
+        font-weight: 600;
+        position: absolute;
+        left: -6.5rem;
+        border-radius: 5rem;
+        svg{
+            fill: $color-white;
+            height: 25px;
+            width: 25px;
+        }
+        @include respond(770px){
+            position: relative;
+            left: 0;
+        }
+    }
+
+    .form-select {
+        padding: 10px;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        height: calc(2.5em + 0.75rem + 4px) !important;
+        font-weight: bold;
+        @include respond(phone) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+        }
+        @include respond(big-desktop) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .slider{
+        .slick-slider {
+            margin: 0;
+            .slick-dots{
+                bottom: 0 !important;
+                padding: 12px;
+                @include respond(phone){
+                    bottom: 6rem !important;
+                    padding: 4rem !important;
+                }
+                @include respond(tab-port){
+                    bottom: 0 !important;
+                    padding: 9rem;
+                }
+                @include respond(tab-land){
+                    bottom: 0 !important;
+                    padding: 9rem;
+                }
+                li{
+                    margin-right: 2rem;
+                    position: relative;
+                    display: inline-block;
+                    width: 40px;
+                    height: 20px;
+                    padding: 0px;
+                    cursor: pointer;
+                    a{
+                        div{
+                            height: 0.7rem;
+                            width: 5rem;
+                            border-radius: 1rem;
+                            background: rgb(white,.5);
+                        }
+                    }
+                }
+                .slick-active{
+                    a{
+                        div{
+                            height: .5rem !important;
+                            width: .5rem !important;
+                            border-radius: 1rem;
+                            background: rgb(white,.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //background: rgba(13, 13, 13, 1);
+    height: auto;
+    @include respond(big-desktop){
+        height: auto;
+    }
+    @include respond(tab-land){
+        height: auto;
+    }
+    @include respond(tab-port){
+        height: auto;
+    }
+    width: 100vw;
+
+    &-left{
+        &-wrap{
+            margin-left: 9rem;
+            @include respond(phone){
+                margin: 0 !important;
+            }
+        }
+        background: rgba(13, 13, 13, 1);
+        .logo{
+            width: 19rem;
+        }
+        &-heading{
+            width: 100%;
+            h1{
+                background: rgba(13, 13, 13, 0.6392156862745098);
+                position: absolute;
+                left:7rem;
+                @include respond(phone){
+                    left:0;
+                }
+                color: $color-primary;
+                padding: 2rem;
+                width: 50vw;
+                @include respond(phone){
+                    width: 100vw;
+                }
+                font-size: 6rem;
+                @include respond(1280px){
+                    font-size: 4.2rem;
+                    padding-left: 3rem !important;
+                    width: 100%;
+                }
+                @include respond(phone){
+                    font-size: 4rem;
+                }
+                text-align: left;
+                margin-left: 0;
+                padding-right: 9rem;
+                @include respond(phone){
+                    padding: 0 !important;
+                    padding-left: 3rem !important;
+                    width: 100%;
+                }
+                //-------animation---------
+                //animation-name: loco;
+                //animation-duration: 4s;
+                //animation-direction: alternate;
+                font-weight: 700;
+                z-index: 0;
+            }
+            &--bottom{
+                margin-top: 25rem;
+                @include respond(big-desktop){
+                    margin-top: 28rem;
+                }
+                @include respond(tab-land){
+                    margin-top: 20rem;
+                }
+                @include respond(tab-port){
+                    margin-top: 20rem;
+                }
+                @include respond(phone){
+                    margin-top: 10rem;
+                }
+                padding: 4rem 0rem;
+                @include respond(phone){
+                    padding: 2rem;
+                }
+                p{
+                    color: $color-primary;
+                    margin-top: -6rem;
+                    font-weight: 600;
+                    font-size: 2.2rem;
+                    @include respond(phone) {
+                        margin-bottom: 10rem;
+                        margin-top: 2rem;
+                    }
+                    @include respond(tab-port) {
+                        margin-bottom: 10rem;
+                    }
+                    @include respond(tab-land) {
+                        color: $color-primary;
+                        margin-top: 4rem;
+                        font-weight: 600;
+                        font-size: 2rem;
+                        margin-bottom: 10rem;
+                    }
+                }
+                input{
+                    border:none;
+                    border-radius: 1.9rem;
+                    height: 3.5rem;
+                    background: rgba($color-primary,.2);
+                    color:$color-primary;
+                    font-size: $default-font;
+                    padding: 0 1rem;
+                    z-index: 1;
+                    &:focus{
+                        outline: none;
+                    }
+                    &::placeholder{
+                        color:$color-primary;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+    &-right{
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+        padding-bottom: 70px;
+        @include respond(phone){
+            justify-content: center;
+        }
+        @include respond(tab-port){
+            align-items: center;
+        }
+        img{
+            margin-top: -.7rem;
+            width: 55vw;
+            @include respond(phone){
+                width: 80vw;
+            }
+            @include respond(tab-port){
+                width: 60vw;
+            }
+        }
+    }
+}

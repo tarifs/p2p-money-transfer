@@ -1,0 +1,58 @@
+@import '../base/mixin';
+.banner{
+    min-height: 300px;
+    height: 100%;
+    display: flex;
+    p{
+        text-align: center;
+        width: 70vw;
+        background: #00000082;
+        color: $color-primary;
+        margin: auto;
+        font-size: 4rem;
+        padding: 2rem 3rem;
+        font-weight: 900;
+    }
+    //@include respond(big-desktop){
+    //    height: 50vh;
+    //}
+    @include respond(tab-land)
+    {
+        min-height: auto;
+        p{
+            width: 90vw;
+            margin:2rem auto;
+        }
+    }
+    @include respond(tab-port){
+        p{
+            width: 95vw;
+        }
+
+    }
+    //@include respond(phone){
+    //
+    //}
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-button {
+    margin-left: 36vw;
+    position: relative;
+    margin-top: -6.5rem;
+    @include respond(phone) {
+        margin-left: 12vw;
+    }
+    button {
+        color: $color-primary;
+        a{
+            color: #000000;
+            font-size: 2.2rem;
+            padding: 0 35px 0 25px;
+            font-weight: bold;
+        }
+    }
+
+}
