@@ -13,17 +13,20 @@ class DashboardController extends Controller
     public function index(): JsonResponse {
         $total_converted_amount = 0;
         $third_max_transaction = 0;
+        $currency = '';
         $user = auth('sanctum')->user();
         if($user) {
+            $currency = $user->currency;
             $total_converted_amount = Wallet::where('sender_id', $user->id)->sum('sender_amount');
-            $third_max_transaction_query = DB::select( DB::raw("select max(sender_amount) as amount from wallets where sender_amount < (select max(sender_amount) from wallets where sender_amount < (select max(sender_amount) from wallets))") );
-            $third_max_transaction = $third_max_transaction_query? $third_max_transaction_query[0]->amount : 0;
+            $third_max_transaction_query = DB::select( DB::raw("select max(sender_amount) as amount from wallets where sender_id = '$user->id' and sender_amount < (select max(sender_amount) from wallets where sender_amount < (select max(sender_amount) from wallets))") );
+            $third_max_transaction = isset($third_max_transaction_query) && $third_max_transaction_query[0]->amount != null? $third_max_transaction_query[0]->amount : 0;
         }
 
         return response()->json(
             [
                 'total_converted_amount' => $total_converted_amount,
-                'third_max_transaction' => $third_max_transaction
+                'third_max_transaction' => $third_max_transaction,
+                'currency' => $currency,
             ]
         );
     }

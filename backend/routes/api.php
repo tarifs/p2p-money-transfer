@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Dashboard\DashboardController;
+use App\Http\Controllers\Api\HomeController;
 use App\Http\Controllers\Wallet\WalletController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,5 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::post('/dashboard', [DashboardController::class, 'index']);
     Route::post('/send-money', [WalletController::class, 'sendMoney']);
 });
+
+Route::get('/most-conversion', [HomeController::class, 'index']);

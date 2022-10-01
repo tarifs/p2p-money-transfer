@@ -4,9 +4,12 @@ class AppUrl {
   //auth routes
   static userLogin = this.ApiBaseURL + "/login";
   static logout = this.ApiBaseURL + "/logout";
-  
-  //sent money
+
+  //send money
   static sendMoney = this.ApiBaseURL + "/send-money";
+
+  //dashboard
+  static dashboard = this.ApiBaseURL + "/dashboard";
 }
 
 export default AppUrl;
