@@ -38,10 +38,14 @@ const Dashboard = () => {
         <PreLoader />
       ) : (
         <>
-          <h1>
-            Most conversion user name is{" "}
-            <b>{dashboard?.most_conversion_user?.name}</b>
-          </h1>
+          {dashboard && dashboard.most_conversion_user ? (
+            <h1>
+              Most conversion user name is{" "}
+              <b>{dashboard?.most_conversion_user?.name}</b>
+            </h1>
+          ) : (
+            ""
+          )}
           <h4>
             Total received amount <b>{dashboard?.total_received_amount}</b>{" "}
             {dashboard?.currency?.toUpperCase()}

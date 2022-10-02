@@ -16,7 +16,7 @@ class WalletController extends Controller
         $this->sendMoneyService = $sendMoneyService;
     }
 
-    public function sendMoney(CreateRequest $request) {
+    public function sendMoney(CreateRequest $request): JsonResponse {
         $send_money = $this->sendMoneyService->store($request);
         if($send_money) {
             return response()->json([
