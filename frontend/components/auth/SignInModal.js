@@ -63,7 +63,7 @@ function SignInModal(props) {
           className="close menu-show-btn"
           onClick={() => props.onHide()}
         >
-          <i class="bi bi-x-lg text-danger text-large"></i>
+          <i className="bi bi-x-lg text-danger text-large"></i>
         </button>
         <div className="modal-body auth-modal-body">
           <div className="container">

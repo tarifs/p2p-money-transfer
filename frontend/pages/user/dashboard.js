@@ -37,26 +37,37 @@ const Dashboard = () => {
       {loading ? (
         <PreLoader />
       ) : (
-        <Row md={2} className="g-4">
-          <Col>
-            <Card body>
-              The total converted amount{" "}
-              <h4>
-                {dashboard?.total_converted_amount}{" "}
-                {dashboard?.currency?.toUpperCase()}
-              </h4>
-            </Card>
-          </Col>
-          <Col>
-            <Card body>
-              Third highest amount of transactions{" "}
-              <h4>
-                {dashboard?.third_max_transaction}{" "}
-                {dashboard?.currency?.toUpperCase()}
-              </h4>
-            </Card>
-          </Col>
-        </Row>
+        <>
+          <h1>
+            Most conversion user name is{" "}
+            <b>{dashboard?.most_conversion_user?.name}</b>
+          </h1>
+          <h4>
+            Total received amount <b>{dashboard?.total_received_amount}</b>{" "}
+            {dashboard?.currency?.toUpperCase()}
+          </h4>
+          <hr />
+          <Row md={2} className="g-4">
+            <Col>
+              <Card body>
+                The total converted amount{" "}
+                <h4>
+                  {dashboard?.total_converted_amount}{" "}
+                  {dashboard?.currency?.toUpperCase()}
+                </h4>
+              </Card>
+            </Col>
+            <Col>
+              <Card body>
+                Third highest amount of transactions{" "}
+                <h4>
+                  {dashboard?.third_max_transaction}{" "}
+                  {dashboard?.currency?.toUpperCase()}
+                </h4>
+              </Card>
+            </Col>
+          </Row>
+        </>
       )}
     </UserLayout>
   );
