@@ -7,12 +7,18 @@ import Api from "../../service/Api";
 import AuthenticatedRoute from "../../components/AuthenticatedRoute";
 import PreLoader from "../../components/partials/PreLoader";
 import { Card, Col, Row } from "react-bootstrap";
+import { useRouter } from "next/router";
+import AppStorage from "../../service/AppStorage";
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(false);
   const [dashboard, setDashboard] = useState([]);
+  const router = useRouter();
 
   useEffect(async () => {
+    if (!AppStorage.getToken()) {
+      router.push("/");
+    }
     setLoading(true);
     await axios
       .post(AppUrl.dashboard, [], { headers: Api.getHeaders() })

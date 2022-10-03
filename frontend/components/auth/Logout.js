@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AppUrl from "../../service/AppUrl";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -9,6 +9,12 @@ import AppStorage from "../../service/AppStorage";
 
 const Logout = ({ afterLogout }) => {
   const router = useRouter();
+
+  useEffect(() => {
+    if (!AppStorage.getToken()) {
+      router.push("/");
+    }
+  }, []);
 
   const onLogout = () => {
     afterLogout();

@@ -8,7 +8,6 @@ import AppStorage from "../../service/AppStorage";
 function TopNavBar(props) {
   const [loginModalShow, setLoginModalShow] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
-
   const [user, setUser] = useState({});
 
   const afterLogout = () => {
@@ -21,7 +20,11 @@ function TopNavBar(props) {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setUser(AppStorage.getUser());
+      if (!AppStorage.getToken()) {
+        setUser({});
+      } else {
+        setUser(AppStorage.getUser());
+      }
     }
   }, [typeof window !== "undefined"]);
 
@@ -39,13 +42,11 @@ function TopNavBar(props) {
               className={
                 "nav-icons d-flex align-items-center " +
                 (mobileMenu ? "nav-icons-show" : "nav-icons-hide")
-              }
-            >
+              }>
               <Nav>
                 <NavDropdown
                   title={<i className="bi bi-person-circle" />}
-                  id="nav-dropdown"
-                >
+                  id="nav-dropdown">
                   {(!user || !Object.keys(user).length) && (
                     <>
                       <NavDropdown.Item onClick={() => setLoginModalShow(true)}>
@@ -58,8 +59,7 @@ function TopNavBar(props) {
                       <Link
                         className="text-danger"
                         href={`/user/dashboard`}
-                        passHref
-                      >
+                        passHref>
                         <NavDropdown.Item>Dashboard</NavDropdown.Item>
                       </Link>
                       <Logout afterLogout={afterLogout} />
